@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useUser } from "@clerk/nextjs";
 import { Budgets, Expenses } from "@/utils/schema";
 import { toast } from "sonner";
+import moment from "moment";
 function AddExpenses({budgetId,refreshdata}) {
     const [name, setName] = useState('');
     const [amount,setAmount]= useState('');
@@ -19,7 +20,7 @@ function AddExpenses({budgetId,refreshdata}) {
         try {
             // Assuming Expenses model contains the structure of the Expenses table
             const result = await db.insert(Expenses)
-                .values({ name: name, amount: amount, budgetId: budgetId, createdBy: user?.primaryEmailAddress.emailAddress })
+                .values({ name: name, amount: amount, budgetId: budgetId, createdAt: moment().format('DD/MM/yyy') })
                 .returning(); // No need to specify returning fields if not needed
     
             if (result) {

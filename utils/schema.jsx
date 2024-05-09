@@ -13,5 +13,5 @@ export const Expenses = pgTable('expenses',{
     name:varchar('name').notNull(),
     amount:varchar('amount').notNull(),
     budgetId:integer('budgetId').references(()=>Budgets.id),
-    createdBy:varchar('createdxBy').notNull()
+    createdAt:varchar('createdxAt').notNull()
 })

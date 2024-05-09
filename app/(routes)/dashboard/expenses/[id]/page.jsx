@@ -49,12 +49,17 @@ function Expensesscreen({params}) {
             <AddExpenses budgetId={params.id}
              refreshdata={()=>{
                 getBudgetInfo();
+                getExpensesList();
              }}
             />
         </div>
         <div className='mt-4'>
             <h2 className='font-bold text-lg'>Latest Expenses</h2>
-            <ExpensesListTable ExpensesList={expensesList}/>
+            <ExpensesListTable expensesList={expensesList} 
+            refreshData={()=>{
+                getExpensesList();
+                getBudgetInfo();
+            }}/>
         </div>
     </div>
   )
