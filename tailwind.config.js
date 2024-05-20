@@ -17,6 +17,15 @@ module.exports = {
       },
     },
     extend: {
+      utilities: {
+        '.scrollbar-hidden': {
+          'scrollbar-width': 'none', /* Firefox */
+          '-ms-overflow-style': 'none',  /* Internet Explorer 10+ */
+          '&::-webkit-scrollbar': {
+            display: 'none', /* Safari and Chrome */
+          },
+        },
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

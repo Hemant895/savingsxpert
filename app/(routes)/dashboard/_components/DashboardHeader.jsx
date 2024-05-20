@@ -4,8 +4,8 @@ import React from "react";
 function DashboardHeader() {
   return (
     <div className="p-2 border-b shadow-md flex justify-between ">
-      <div>
-        <div className="flex items-center  space-x-4 bg-white rounded-xl  transform transition duration-500">
+      <div className="p-6">
+        {/* <div className="flex items-center  space-x-4 bg-white rounded-xl  transform transition duration-500">
           <div className="flex bg-gray-100 p-4 lg:w-[800px] md:w-auto space-x-2 rounded-lg">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +32,7 @@ function DashboardHeader() {
             <span>Search</span>
           </div>
         </div>
-        
+         */}
       </div>
       <div className=" flex items-center justify-between ">
         <UserButton />

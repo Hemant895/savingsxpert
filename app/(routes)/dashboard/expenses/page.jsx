@@ -5,13 +5,9 @@ import { db } from '@/utils/dbConfig'
 import { desc, eq, getTableColumns, sql } from 'drizzle-orm'
 import { Budgets, Expenses } from '@/utils/schema'
 import { useState } from 'react';
-import CardInfo from './_components/CardInfo';
-import BarChart from './_components/BarChart'
-import BudgetItem from './budgets/_componets/BudgetItem'
-import ExpensesListTable from './expenses/_components/ExpensesListTable'
-
+import ExpensesListTable from './_components/ExpensesListTable';
 function page() {
-  const [budgetList,setBudgetList] = useState([])
+    const [budgetList,setBudgetList] = useState([])
   const [expensesList,setexpensesList] = useState([])
   const {user}= useUser();
   useEffect(()=>{
@@ -61,29 +57,12 @@ function page() {
   }
   
   return (
-    <div className='p-8'>
-      <h1 className='font-bold text-3xl'>Hi , {user?.fullName} ✌️</h1>
-      <p className='text-gray-500 mt-3'>Here's What Happening With Your Money, Let's Manage Your Expenses</p>
-      <CardInfo budgetList = {budgetList}/>
-      <div className=' grid grid-cols-1 md:grid-cols-3 mt-6 gap-5' >
-        <div className='md:col-span-2'>
-          <BarChart budgetList = {budgetList}/>
-          
-          <ExpensesListTable expensesList ={expensesList}
+    <div className='p-5 '>
+     <ExpensesListTable expensesList ={expensesList}
           refreshData={()=>{
             getBudgetList();
           }}
           />
-        </div>
-        <div className='grid gap-3'>
-          <h2 className='font-bold text-lg'>Latest Budgets</h2>
-       {
-        budgetList.map((budget,index)=>(
-          <BudgetItem key={index} budget={budget}/>
-        ))
-       }
-       </div>
-      </div>
     </div>
   )
 }

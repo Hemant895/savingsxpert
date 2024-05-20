@@ -43,6 +43,7 @@ function AddExpenses({budgetId,refreshdata}) {
         <h2 className="text-black font-medium my-1"> Expense Name</h2>
         <Input
           placeholder="e.g kitchen decoration"
+          value={name}
           onChange={(e) => {
             setName(e.target.value);
           }}
@@ -52,6 +53,7 @@ function AddExpenses({budgetId,refreshdata}) {
         <h2 className="text-black font-medium my-1">Expense Amount</h2>
         <Input
           placeholder="e.g 1000"
+          value={amount}
           onChange={(e) => {
             setAmount(e.target.value);
           }}
