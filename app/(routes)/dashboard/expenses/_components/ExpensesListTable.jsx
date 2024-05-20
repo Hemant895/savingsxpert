@@ -42,7 +42,7 @@ function ExpensesListTable({ expensesList,refreshData }) {
      
         {
             expensesList.map((expenses,index)=>(
-            <div className="grid grid-cols-4 bg-slate-300 p-2 ">
+            <div className="grid grid-cols-4 bg-slate-300 p-2 " key={index}>
            <h2 >{expenses.name}</h2>
            <h2>{expenses.amount}</h2>
            <h2>{expenses.createdAt}</h2>

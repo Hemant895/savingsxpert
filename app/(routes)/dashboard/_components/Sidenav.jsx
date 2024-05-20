@@ -17,8 +17,9 @@ function Sidenav() {
    
   return (
     <div className='h-screen  p-5 border shadow-md'>
+         <Link href={'/'} className=' cursor-pointer'>
         <h1 className=' font-bold text-indigo-900 flex text-2xl'>Savings<span className='text-gray-500'>Xpert</span> <Image src={'/money-bag.png' } height={30} width={40}/></h1> 
-       
+        </Link>
        <div className='mt-5'>
        {
             menuList.map((menu,index) => (
