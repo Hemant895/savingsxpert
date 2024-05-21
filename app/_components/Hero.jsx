@@ -4,7 +4,7 @@ import React from 'react'
 function Hero() {
   return (
     <div>
-        <section className=" text-white relative  bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/piggybank1.jpg')" }}>
+        <section className=" text-white relative  lg:bg-cover lg:bg-center lg:bg-no-repeat" style={{ backgroundImage: "url('/piggybank1.jpg')" }}>
   <div className="mx-auto max-w-screen-xl px-2 py-6 lg:flex ">
     <div className="mx-auto max-w-3xl text-center">
       <h1
