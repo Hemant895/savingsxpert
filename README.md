@@ -1,4 +1,28 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SavingsXpert
+
+SavingsXpert is a web application designed to help you manage your finances effectively. Built with Next.js, it leverages the powerful features and performance optimizations provided by the framework to deliver a seamless user experience.
+
+## Features
+
+- **Financial Management**: Easily track your expenses, income, and savings in one place.
+- **Goal Setting**: Set savings goals and track your progress over time.
+- **Interactive Dashboard**: Visualize your financial data with interactive charts and graphs.
+- **Secure Authentication**: Ensure the security of your financial information with robust authentication mechanisms.
+- **Responsive Design**: Access SavingsXpert from any device with a responsive and mobile-friendly design.
+
+## Technologies Used
+
+- **Next.js**: A React framework for building server-rendered applications.
+- **React**: A JavaScript library for building user interfaces.
+- **PostgreSQL**: A powerful, open-source relational database system.
+- **Tailwind CSS**: A utility-first CSS framework for styling the application.
+
+## Installation
+
+Clone the repository:
+   ```bash
+   git clone https://github.com/Hemant895/savingsxpert.git
+
 
 ## Getting Started
 
